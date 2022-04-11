@@ -1,0 +1,63 @@
+.right-menu-popup {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .3);
+  position: fixed;
+  z-index: 10;
+  transition: .1s;
+}
+
+.right-menu-popup.right-menu-hidden {background-color: rgba(0, 0, 0, .0)}
+.right-menu-popup.right-menu-hidden .menu {transform: translateX(-100%)}
+
+.right-menu-popup .menu {
+  width: 676px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .1s;
+  transform: translateX(0)
+}
+
+.right-menu-popup .menu .content {position: relative}
+
+.right-menu-popup .menu .content .close-button {
+  position: absolute;
+  top: 10px;
+  left: -80px;
+  font-size: 40px;
+  transition: .1s;
+  cursor: pointer;
+}
+.right-menu-popup .menu .content .close-button:hover {opacity: .5}
+
+.right-menu-popup .menu .content .content-item a {display: inline-block}
+
+.right-menu-popup .menu .content .main a {margin-bottom: 50px}
+.right-menu-popup .menu .content .main a:last-child {margin-bottom: 80px}
+
+.right-menu-popup .menu .content .secondary a {margin-bottom: 25px}
+.right-menu-popup .menu .content .secondary *:last-child {margin-bottom: 120px}
+
+@media (max-width: 1024px) {
+  .right-menu-popup.right-menu-hidden .menu {transform: translateX(100%)}
+
+  .right-menu-popup .menu {
+    width: 554px;
+    position: absolute;
+    right: 0;
+  }
+
+  .right-menu-popup .menu .content {position: unset}
+
+  .right-menu-popup .menu .content .close-button {
+    top: 30px;
+    left: unset;
+    right: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .right-menu-popup .menu {width: 100vw}
+}

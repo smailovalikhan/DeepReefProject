@@ -1,0 +1,141 @@
+* {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  color: #fff;
+}
+
+/* HEADLINES */
+
+.hdl1 {
+  font-size: 110px;
+  line-height: 110%;
+  font-weight: bold;
+}
+
+.hdl2 {
+  font-size: 76px;
+  line-height: 120%;
+}
+
+.hdl2-105 {
+  font-size: 76px;
+  line-height: 105%;
+}
+
+.hdl3 {
+  font-size: 47px;
+  line-height: 120%;
+}
+
+.hdl4 {
+  font-size: 30px;
+  line-height: 120%;
+}
+
+.hdl4-130 {
+  font-size: 30px;
+  line-height: 130%;
+}
+
+.hdl5 {
+  font-size: 22px;
+  line-height: 130%;
+}
+
+/* TEXT */
+
+.txt1 {
+  font-size: 24px;
+  line-height: 160%;
+}
+
+.txt2 {
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.txt3 {
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.ntxt1 {
+  font-size: 24px;
+  line-height: 155%;
+}
+
+.scrooltxt {
+  font-size: 18px;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.captxt {
+  font-size: 16px;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.badgetxt {
+  font-size: 16px;
+  line-height: 170%;
+  text-transform: uppercase;
+}
+
+.buttxt {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.buttxt2 {
+  font-size: 16px;
+  line-height: 130%;
+}
+
+@media (max-width: 1600px) {
+  .hdl1 {
+    font-size: 100px;
+    line-height: 130%;
+  }
+
+  .txt2 {
+    font-size: 18px;
+    line-height: 160%;
+  }  
+}
+
+@media (max-width: 1024px) {
+  .hdl1 {
+    font-size: 76px;
+    line-height: 120%;
+  }
+
+  .hdl2 {font-size: 47px}
+
+  .hdl5 {font-size: 18px}
+
+  .txt2 {
+    font-size: 16px;
+    line-height: 160%;
+  }  
+}
+
+@media (max-width: 640px) {
+  .hdl3 {font-size: 30px} 
+}
+
+@media (max-width: 320px) {
+  .hdl1 {
+    font-size: 47px;
+    line-height: 110%;
+  }
+
+  .hdl2 {font-size: 30px}
+
+  .txt1 {font-size: 18px}
+
+  .txt2 {
+    font-size: 14px;
+    line-height: 160%;
+  }  
+}

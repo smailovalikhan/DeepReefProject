@@ -1,0 +1,57 @@
+/* BACKGROUND */
+
+.fillBG {
+  background-color: #020306;
+}
+
+.fillBlue {
+  background-color: #0085FF;
+}
+
+.fillWhite {
+  background-color: #fff;
+}
+
+.fillDarkBlue {
+  background-color: #383C4B;
+}
+
+.fillDarkBlue2 {
+  background-color: #1952AD;
+}
+
+/* COLOR */
+
+.colorBG {
+  color: #020306;
+}
+
+.colorBlue {
+  color: #0085FF;
+}
+
+.colorWhite {
+  color: #fff;
+}
+
+.colorDarkBlue {
+  color: #383C4B;
+}
+
+.colorDarkBlue2 {
+  color: #1952AD;
+}
+
+/* BORDER */
+
+.borderWhite {
+  border-color: #fff;
+}
+
+.borderBlue {
+  border-color: #0085FF;
+}
+
+.borderDarkBlue {
+  border-color: #383C4B;
+}
