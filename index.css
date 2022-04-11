@@ -1,0 +1,660 @@
+body {overflow-x: hidden}
+
+.wrapper {
+  max-width: 1920px;
+  display: flex;
+  overflow-x: hidden
+}
+
+.right-menu {
+  width: 100px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-line {
+  position: fixed;
+  top: 0;
+  left: 100px;
+  width: 2px;
+  height: 100vh;
+}
+
+.scroll-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: inherit;
+  height: 120px;
+}
+
+.menu-button-wrapper {
+  position: fixed;
+  top: 134px;
+  cursor: pointer;
+  padding: 20px;
+  width: 52px;
+  height: 90px;
+} 
+
+.menu-button {
+  width: 100%;
+  height: 100%;
+  border-right: 2px solid;
+  border-left: 2px solid;
+  border-color: #fff;
+  transition: .1s;
+}
+.menu-button-wrapper:hover .menu-button {border-color: #0085FF}
+
+.right-menu .video-button-wrapper {
+  position: fixed;
+  top: 50%;
+  padding: 20px;
+  width: 44px;
+  height: 70px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.right-menu .video-button {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-menu .video-button .dot {
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  transition: .1s;
+}
+.right-menu .video-button-wrapper:hover .dot {background-color: #0085FF}
+
+.main-content-wrapper {
+  padding: 50px;
+  width: calc(100% - 100px);
+}
+
+/* SCREEN 1 */
+
+.screen1 {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.screen1-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.screen1-bg .particle1 {
+  width: 687px;
+  height: 687px;
+  position: absolute;
+  top: -350px;
+  left: -350px;
+  filter: blur(500px);
+  opacity: .3;
+  z-index: 1;
+}
+
+.screen1-bg img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 120%;
+  opacity: .4;
+}
+
+.screen1-bg p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.screen1 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.screen1 .nav .menu-button-wrapper {display: none}
+
+.screen1 .logo-counter img {margin-right: 50px}
+
+.screen1 .txt-content h1 {margin-bottom: 40px}
+
+.screen1 .description-container {display: flex}
+
+.screen1 .description-container p {opacity: .7}
+
+.screen1 .description-container p:first-child {
+  margin-right: 100px;
+  width: 477px;
+}
+
+.screen1 .description-container p:nth-child(2) {width: 421px}
+
+.screen1 .txt-content .btn.big-btn {
+  margin-top: 50px;
+  display: none;
+}
+
+/* SCREEN 2 */
+
+.screen2 {margin-top: 250px}
+
+.screen2 .mission {display: flex}
+
+.screen2 .mission .title {
+  text-transform: uppercase;
+  width: 425px;
+  flex-shrink: 0;
+  margin-right: 143px;
+}
+
+.screen2 .mission h3 {width: 820px}
+
+.screen2 .cases {
+  margin-top: 70px;
+  display: flex;
+}
+
+.screen2 .cases .case-item {
+  margin-right: 143px;
+  flex-shrink: 0;
+}
+.screen2 .cases .case-item:first-child {width: 425px}
+.screen2 .cases .case-item:nth-child(2) {width: 348px}
+.screen2 .cases .case-item:last-child {
+  width: 400px;
+  margin-right: 0;
+}
+
+.screen2 .cases .case-item .item-num {margin-bottom: 10px}
+
+.screen2 .cases .case-item .item-title {margin-bottom: 22px}
+
+.screen2 .cases .case-item .item-describe {opacity: .7}
+
+/* SCREEN 3 */
+
+.screen3 {margin-top: 270px}
+
+.screen3 .top-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.screen3 .top-nav .nav-description {margin-right: 150px}
+
+.screen3 .top-nav .nav-description .product-title {margin-right: 64px}
+
+.screen3 .top-nav .slider-nav .slider-nav-nums {margin-bottom: 50px}
+
+.screen3 .top-nav .slider-nav .slider-nav-arrows {
+  display: flex;
+  align-items: center;
+}
+
+.screen3 .top-nav .slider-nav .slider-nav-arrows div {
+  font-size: 35px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .1s;
+}
+.screen3 .top-nav .slider-nav .slider-nav-arrows div:first-child {margin-right: 18px}
+
+.screen3 .top-nav .slider-nav .slider-nav-arrows div:hover {
+  border-color: #0085FF;
+  color: #0085FF;
+}
+
+.screen3 .screen3-cases {
+  display: flex;
+  margin-top: 80px;
+}
+
+.screen3 .screen3-cases .case-item {
+  width: 500px;
+  height: 338px;
+  margin-right: 80px;
+  flex-shrink: 0;
+  padding: 40px;
+  border: 1px solid #383C4B;
+}
+.screen3 .screen3-cases .case-item:last-child {margin-right: 0}
+
+.screen3 .screen3-cases .case-item .case-item-num {margin-bottom: 10px}
+
+.screen3 .screen3-cases .case-item .case-item-title {margin-bottom: 25px}
+
+.screen3 .screen3-cases .case-item .case-item-description {opacity: .7}
+
+/* SCREEN 4 */
+
+.screen4 {
+  margin-top: 250px;
+  position: relative;
+}
+
+.screen4-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.screen4-bg img {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 30%;
+  transform: translateY(-35%);
+}
+
+.screen4-title span {margin-right: 64px}
+
+.screen4 .description {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.screen4 .description p {opacity: .7}
+.screen4 .description p:first-child {
+  max-width: 435px;
+  margin-right: 180px;
+}
+.screen4 .description p:last-child {max-width: 430px}
+
+.screen4 .mob-img {
+  display: none;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.screen4 .mob-img img {width: 80%}
+
+/* SCREEN 5 */
+
+.screen5 {
+  display: flex;
+  align-items: center;
+  margin-top: 220px;
+  padding-left: 13%;
+}
+
+.screen5 .content {
+  width: 50%;
+}
+
+.screen5 .content .title {
+  margin-bottom: 40px;
+}
+
+.screen5 .content .title span {
+  display: block;
+  margin-bottom: 22px;
+}
+
+.screen5 .content .description {
+  max-width: 520px;
+  opacity: .7;
+  margin-bottom: 82px;
+}
+
+.screen5 img {
+  width: 50%;
+}
+
+/* SCREEN 6 */
+
+.screen-top-line {position: relative}
+.screen-top-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 100vw;
+  height: 2px;
+  background-color: #383C4B;
+}
+
+.screen6 {
+  margin-top: 200px;
+  padding-top: 136px;
+  display: block;
+}
+
+.screen6 .title {margin-bottom: 30px}
+
+.screen6 .description {margin-bottom: 60px}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 136px;
+  padding-top: 50px;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .content .content-item h4 {margin-bottom: 30px}
+.footer .content .content-item:last-child h4 {margin-bottom: 50px}
+
+.footer .content .content-item p,
+.footer .content .content-item a {margin-bottom: 15px}
+
+.footer .content .content-item a {display: block}
+
+.footer .content .content-item .btn {display: inline-block}
+
+.footer .ps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 220px;
+}
+
+/* MEDIA REQUESTS */
+
+@media (max-width: 1600px) {
+  .screen1 .description-container p:first-child {margin-right: 80px}
+
+  .screen2 .mission .title {margin-right: 125px;}
+
+  .screen2 .mission h3 {
+    width: 733px;
+    margin-bottom: 60px;
+  }
+
+  .screen2 .cases .case-item {margin-right: 125px}
+  .screen2 .cases .case-item:last-child {width: 320px}
+
+  .screen3 .top-nav .nav-description {margin-right: 100px}
+
+  .screen5 {margin-top: 180px}
+}
+
+@media (max-width: 1024px) {
+
+  .right-menu {display: none}
+
+  .main-content-wrapper {
+    padding: 30px 12px;
+    width: 100%;
+  }
+
+  .screen1 {
+    height: unset;
+    display: block;
+    flex-direction: unset;
+    justify-content: unset;
+  }
+  
+  .screen1-bg .particle1,
+  .screen1-bg p,
+  .screen1 .nav .counter, 
+  .screen1 .calc-investments {display: none}
+
+  .screen1 .nav .menu-button-wrapper {
+    display: block;
+    transform: rotate(90deg);
+    top: 30px;
+    left: unset;
+    right: 30px;
+  }
+  
+
+  .screen1 .txt-content h1 {
+    margin-top: 290px;
+    margin-bottom: 45px;
+  }
+
+  .screen1 .description-container p:first-child {width: 430px}
+  .screen1 .description-container p:nth-child(2) {width: 375px}
+
+  .screen2 {margin-top: 190px}
+
+  .screen2 .mission {display: unset}
+
+  .screen2 .mission .title {margin-bottom: 30px}
+
+  .screen2 .mission h3 {
+    width: 820px;
+    margin-bottom: 70px;
+  }
+
+  .screen2 .cases {flex-wrap: wrap}
+
+  .screen2 .cases .case-item {
+    margin-right: 80px;
+    margin-bottom: 54px;
+  }
+  .screen2 .cases .case-item:last-child {
+    margin-bottom: 0;
+    width: 400px;
+  }
+
+  .screen3 {margin-top: 175px}  
+
+  .screen3 .top-nav .slider-nav {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .screen3 .top-nav .slider-nav .slider-nav-nums {
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+
+  .screen3 .top-nav .nav-description {margin-right: 30px}
+  .screen3 .top-nav .slider-nav .slider-nav-arrows div {
+    width: 70px;
+    height: 70px;
+  }
+
+  .screen4-bg img {transform: translateY(-70%)}
+
+  .screen4 .description p:first-child {margin-right: 100px}
+
+  .screen5 {
+    margin-top: 130px;
+    padding: 0;
+    display: block;
+  }
+
+  .screen5 .content {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .screen5 .content .description {
+    margin-right: 26%;
+    margin-bottom: 60px;
+  }
+
+  .screen5 img {width: 85%}
+
+  .screen6 {
+    margin-top: 125px;
+    padding-top: 136px;
+  }
+
+  .screen-top-line::after {width: 200vw}
+
+  .footer .content {display: block}
+
+  .footer .content .content-item {margin-bottom: 50px}
+  .footer .content .content-item:last-child {margin-bottom: 0}
+
+  .footer .ps {
+    margin-top: 140px;
+    display: block;
+  }
+
+  .footer .ps *:first-child {margin-bottom: 25px}
+}
+
+@media (max-width: 640px) {
+
+  .main-content-wrapper {padding: 50px 20px}
+
+  .screen1-bg img {
+    width: 100%;
+    height: unset;
+  }
+
+  .screen1 .language-dropdown {display: none}
+
+  .screen1 .txt-content h1 {
+    margin-top: 190px;
+    margin-bottom: 30px;
+  }
+
+  .screen1 .description-container {
+    flex-direction: column;
+    width: 435px;
+  }
+
+  .screen1 .description-container p:first-child {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .screen1 .txt-content .btn.big-btn {display: inline-block}
+
+  .screen2 {margin-top: 150px}
+
+  .screen2 .mission h3 {
+    width: 510px;
+    margin-bottom: 60px;
+  }
+
+  .screen3 {margin-top: 150px}
+
+  .screen3 .top-nav .nav-description .product-title {
+    margin-right: 0;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .screen3 .top-nav .slider-nav {
+    order: 2;
+    margin-top: 50px;
+    display: unset;
+  }
+
+  .screen3 .top-nav .slider-nav .slider-nav-nums {margin-bottom: 30px}
+
+  .screen3 .screen3-cases {margin-top: 50px}
+  
+  .screen3 .screen3-cases .case-item {
+    width: calc(100vw - 40px);
+    height: unset;
+  }
+
+  .screen4 {margin-top: 150px}
+
+  .screen4-bg img {display: none}
+
+  .screen4 .screen4-title span {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .screen4 .description p:first-child {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .screen4 .mob-img {display: block}
+
+  .screen5 .content .title {margin-bottom: 30px}
+
+  .screen5 .content .description {margin-bottom: 50px}
+
+  .screen6 .description {margin-bottom: 50px}
+}
+
+@media (max-width: 320px) {
+  .main-content-wrapper {padding: 30px 10px}
+
+  .screen1 .language-dropdown {display: none}
+
+  .screen1 .txt-content h1 {margin-top: 100px}
+
+  .screen1 .description-container,
+  .screen1 .description-container p {width: 100% !important}
+  
+  .screen1 .txt-content .btn.big-btn {
+    display: block;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .screen2 {margin-top: 100px}
+
+  .screen2 .mission h3 {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .screen2 .cases .case-item {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+
+  .screen3 {margin-top: 100px}
+
+  .screen3 .top-nav .slider-nav {order: 0}
+
+  .screen3 .top-nav .slider-nav .slider-nav-nums {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .screen3 .top-nav .slider-nav .slider-nav-arrows div {
+    width: 50px;
+    height: 50px;
+  }
+
+  .screen3 .screen3-cases .case-item {padding: 30px}
+
+  .screen5 img {width: 100%}
+
+  .screen6 {
+    margin-top: 100px;
+    padding-top: 100px;
+  }
+
+  .screen6 .title {margin-bottom: 15px}
+  .screen6 .description {margin-bottom: 40px}
+  
+  .footer,
+  .footer .ps {margin-top: 100px}
+
+  .footer .ps *:first-child {margin-bottom: 15px}
+}
