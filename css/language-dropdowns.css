@@ -1,0 +1,34 @@
+.language-dropdown {
+  overflow: hidden;
+  position: relative;
+}
+
+.language-dropdown.active {overflow: unset}
+.language-dropdown.active svg {transform: rotate(-180deg)}
+
+.language-dropdown .main {cursor: pointer}
+
+.language-dropdown .main p {
+  display: inline;
+  cursor: pointer;
+}
+
+.language-dropdown .main svg {
+  width: 16px;
+  height: 10px;
+  margin-left: 4px;
+  transition: .1s;
+}
+
+.language-dropdown .main svg path {transition: .1s}
+
+.language-dropdown .main:hover p {color: #0085FF}
+.language-dropdown .main:hover svg path {stroke: #0085FF}
+
+.language-dropdown p {
+  transition: .1s;
+  cursor: pointer;
+}
+.language-dropdown p:hover {color: #0085FF}
+
+.language-dropdown p:last-child {position: absolute}

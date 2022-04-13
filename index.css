@@ -226,13 +226,16 @@ body {overflow-x: hidden}
 }
 
 .screen3 .screen3-cases {
+  width: 100%;
   display: flex;
   margin-top: 80px;
+  overflow-x: hidden;
 }
 
 .screen3 .screen3-cases .case-item {
   width: 500px;
-  height: 338px;
+  min-height: 338px;
+  max-height: 390px;
   margin-right: 80px;
   flex-shrink: 0;
   padding: 40px;
@@ -572,6 +575,7 @@ body {overflow-x: hidden}
   .screen3 .screen3-cases .case-item {
     width: calc(100vw - 40px);
     height: unset;
+    max-height: unset;
   }
 
   .screen4 {margin-top: 150px}
