@@ -32,7 +32,7 @@ body {overflow-x: hidden}
 
 .menu-button-wrapper {
   position: fixed;
-  top: 134px;
+  top: 60px;
   cursor: pointer;
   padding: 20px;
   width: 52px;
@@ -154,32 +154,35 @@ body {overflow-x: hidden}
 
 .screen2 {margin-top: 250px}
 
-.screen2 .mission {display: flex}
+.screen2 .mission {
+  display: flex;
+  justify-content: space-between;
+}
 
 .screen2 .mission .title {
   text-transform: uppercase;
-  width: 425px;
+  max-width: 27%;
   flex-shrink: 0;
-  margin-right: 143px;
 }
 
-.screen2 .mission h3 {width: 820px}
+.screen2 .mission h3 {
+  max-width: 61.5%;
+  padding-right: 10%;
+}
 
 .screen2 .cases {
   margin-top: 70px;
   display: flex;
+  justify-content: space-between;
 }
 
 .screen2 .cases .case-item {
-  margin-right: 143px;
+  margin-right: 0;
   flex-shrink: 0;
 }
-.screen2 .cases .case-item:first-child {width: 425px}
-.screen2 .cases .case-item:nth-child(2) {width: 348px}
-.screen2 .cases .case-item:last-child {
-  width: 400px;
-  margin-right: 0;
-}
+.screen2 .cases .case-item:first-child {max-width: 27%}
+.screen2 .cases .case-item:nth-child(2) {max-width: 23%}
+.screen2 .cases .case-item:last-child {max-width: 27%}
 
 .screen2 .cases .case-item .item-num {margin-bottom: 10px}
 
@@ -387,12 +390,9 @@ body {overflow-x: hidden}
   .screen2 .mission .title {margin-right: 125px;}
 
   .screen2 .mission h3 {
-    width: 733px;
+    /* width: 733px; */
     margin-bottom: 60px;
   }
-
-  .screen2 .cases .case-item {margin-right: 125px}
-  .screen2 .cases .case-item:last-child {width: 320px}
 
   .screen3 .top-nav .nav-description {margin-right: 100px}
 
@@ -450,14 +450,9 @@ body {overflow-x: hidden}
 
   .screen2 .cases {flex-wrap: wrap}
 
-  .screen2 .cases .case-item {
-    margin-right: 80px;
-    margin-bottom: 54px;
-  }
-  .screen2 .cases .case-item:last-child {
-    margin-bottom: 0;
-    width: 400px;
-  }
+  .screen2 .cases .case-item:first-child {max-width: 45%}
+  .screen2 .cases .case-item:nth-child(2) {max-width: 39%}
+  .screen2 .cases .case-item:last-child {max-width: 43%}
 
   .screen3 {margin-top: 175px}  
 
@@ -554,6 +549,10 @@ body {overflow-x: hidden}
     margin-bottom: 60px;
   }
 
+  .screen2 .cases .case-item:first-child {max-width: 84%}
+  .screen2 .cases .case-item:nth-child(2) {max-width: 70%}
+  .screen2 .cases .case-item:last-child {max-width: 84%}
+
   .screen3 {margin-top: 150px}
 
   .screen3 .top-nav .nav-description .product-title {
@@ -627,7 +626,7 @@ body {overflow-x: hidden}
   }
 
   .screen2 .cases .case-item {
-    width: 100% !important;
+    max-width: 100% !important;
     margin-bottom: 30px;
   }
 

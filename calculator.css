@@ -1,0 +1,63 @@
+.screen4 form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-left: 160px;
+}
+
+.screen4 form input,
+.screen4 form select {
+  width: 48.8%;
+  margin-bottom: 30px;
+}
+
+.screen4 form .range {margin-top: 20px}
+
+.screen4 form label,
+.screen4 .range,
+.screen4 form input[type="range"] {width: 100%}
+
+.screen4 form input[type="range"] {
+  margin: 0;
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  height: 0;
+}
+
+.screen4 form .marks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.screen4 form .marks p {opacity: 1}
+.screen4 form .marks p:first-child {margin: 0}
+
+.screen4 .ps {margin-top: 60px}
+
+.screen4 form button[type="submit"] {
+  width: 100%;
+  margin-top: 60px;
+}
+
+@media (max-width: 1024px) {
+  .screen4 form input,
+  .screen4 form select {width: 46.8%}
+
+  .screen4 form input[type="range"] {padding-bottom: 0}
+}
+
+@media (max-width: 640px) {
+  .screen4 form {margin-left: 0}
+  
+  .screen4 form input,
+  .screen4 form select {width: 100%}
+
+  .screen4 form .marks p {font-size: 14px}
+}
+
+@media (max-width: 320px) {
+  .screen4 form .marks p {font-size: 12px}
+}

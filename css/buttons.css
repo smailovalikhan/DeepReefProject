@@ -17,6 +17,7 @@
 
 .linkLine {
   position: relative;
+  cursor: pointer;
 }
 
 .linkLine::after {
@@ -36,4 +37,20 @@
 
 @media (max-width: 320px) {
   .btn {width: 100% }
+}
+
+.card-link {
+  display: block;
+  transition: .1s;
+}
+
+.card-link p {transition: .1s}
+
+.card-link:hover {
+  background-color: #1952AD;
+  border-color: transparent !important;
+}
+
+.card-link:hover p {
+  color: #fff
 }

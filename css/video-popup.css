@@ -1,0 +1,22 @@
+.video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  opacity: 1;
+  transition: .2s;
+}
+.video-popup.hidden {
+  opacity: 0;
+}
+
+.video-popup video {
+  max-width: 920px;
+  margin: 0 20px;
+}

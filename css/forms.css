@@ -1,0 +1,59 @@
+form input, form textarea,
+form select {
+  width: 100%;
+  border: 1px solid #656565;
+  font-size: 18px;
+  line-height: 130%;
+  padding: 26px;
+  background-color: transparent;
+  margin-bottom: 15px;
+  transition: .1s;
+}
+form input:focus,
+form input:focus-visible,
+form textarea:focus,
+form textarea:focus-visible,
+form select:focus,
+form select:focus-visible {
+  border-color: #0085FF;
+  color: #0085FF;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form input::-moz-focus-inner,
+form textarea::-moz-focus-inner {
+  outline: none !important;
+  border: none !important;
+}
+
+form button[type="submit"] {
+  background-color: #1952AD;
+  font-size: 18px;
+  line-height: 130%;
+  padding: 25px 50px;
+  margin-top: 40px;
+  border: none;
+  cursor: pointer;
+  transition: .1s;
+}
+
+form button[type="submit"]:hover {opacity: .7}

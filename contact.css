@@ -1,0 +1,30 @@
+.screen3 .screen3-cases {flex-wrap: wrap}
+
+.screen3 .screen3-cases .case-item {margin-bottom: 80px}
+
+.screen5 .content .description {
+  margin-bottom: 40px;
+}
+
+.screen5 .content form {
+  max-width: 80%;
+}
+
+.screen5 .content .title {
+  margin-bottom: 30px;
+}
+
+.screen5 .content .title span:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .screen5 img {width: 100%}
+}
+
+@media (max-width: 320px) {
+  .screen5 .content form {
+    width: 100%;
+    max-width: 100%;
+  }
+}

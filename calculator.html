@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Reef — Сalculate your investment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/preventDefault.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/rightMenu.css">
+  <link rel="stylesheet" href="css/language-dropdowns.css">
+  <link rel="stylesheet" href="css/video-popup.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body class="fillBG">
+
+  <div id="video" class="video-popup hidden" style="display: none">
+    <video controls="" src="https://deepreef-user-picture.s3.eu-west-1.amazonaws.com/deepreef+(1).mp4" width="100%">Your browser does not support the video tag.</video>
+  </div>
+
+  <div id="rightMenuPopup" class="right-menu-popup right-menu-hidden" style="display: none">
+    <div class="menu fillDarkBlue2">
+      <div class="content">
+        <div id="closeRightMenu" class="close-button">
+          <img src="img/close.svg" alt="">
+        </div>
+        <div class="main content-item">
+          <a href="https://user.deepreef.uk/login" class="hdl3 linkLine" data-t="t56">Investor Dashboard</a><br>
+          <a href="servises.html" class="hdl3 linkLine" data-t="t57">Services</a><br>
+          <a href="contact.html" class="hdl3 linkLine" data-t="t58">Contact us</a><br>
+        </div>
+        <div class="secondary content-item">
+          <a href="index.html" class="buttxt linkLine" data-t="t59">Home</a><br>
+          <a href="deepReefToken.html" class="buttxt linkLine" data-t="t60">Deep Reef Token</a><br>
+          <a href="calculator.html" class="buttxt linkLine" data-t="t61">Calculate Investment →</a><br>
+          <a class="buttxt linkLine video-btn" data-t="t62">Video about Deep Reef</a><br>
+        </div>
+
+        <div class="language-dropdown captxt">
+          <div class="main">
+            <p data-lang="en">english</p>
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.492371 0.716232L5.66696 5.89082L10.8416 0.716232" stroke="white"/>
+            </svg>
+          </div> 
+          <p data-lang="ru">russian</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <div class="right-menu">
+      <div class="scroll-line fillDarkBlue">
+        <div id="scroll-indicator" class="scroll-indicator fillBlue"></div>
+      </div>
+
+      <div class="menu-button-wrapper rightMenuButton">
+        <div class="menu-button"></div>
+      </div>
+      <div class="video-button-wrapper video-btn">
+        <div class="video-button">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content-wrapper">
+      <div class="screen1">
+        <div class="screen1-bg">
+          <div class="particle1 fillBlue"></div>
+          <img src="img/gif1.gif" alt="">
+          <p class="captxt">scroll</p>
+        </div>
+
+        <div class="nav">
+          <div class="nav-side">
+            <nav class="nav">
+              <div class="logo-counter nav">
+                <img src="img/Logo.png" alt="" class="img-logo">
+                <p class="counter txt2"><span id="currentSlide">01</span>/<span id="maxSlide">06</span></p>
+              </div>
+            </nav>
+          </div>
+          <div class="language-dropdown captxt">
+            <div class="main">
+              <p data-lang="en">english</p>
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.492371 0.716232L5.66696 5.89082L10.8416 0.716232" stroke="white"/>
+              </svg>
+            </div> 
+            <p data-lang="ru">russian</p>
+          </div>
+          <div class="menu-button-wrapper rightMenuButton">
+            <div class="menu-button"></div>
+          </div>
+          <a href="calculator.html" class="calc-investments buttxt2 btn" data-t="t1">Calculate Investment</a>
+        </div>
+
+        <div class="txt-content">
+          <h1 class="hdl2" data-t="t2">Сalculate your investment</h1>
+          <div class="description-container">
+            <p class="txt2" data-t="t3">Calculate your estimated retirement savings with our investment calculator and use our service to help you reach your goal.</p>
+          </div>
+          <a href="calculator.html" class="calc-investments buttxt btn big-btn" data-t="t1">Calculate Investment</a>
+        </div>
+      </div>
+
+      <div class="screen4">
+        <h2 class="screen4-title hdl2">
+          <span class="product-title captxt colorBlue">deep reef</span>
+          <span data-t="t35">Calculator</span>
+        </h2>
+
+        <div class="description">
+          <form action="">
+            <input data-t="t36" type="text" name="first-name" placeholder="First name">
+            <input data-t="t37" type="text" name="last-name" placeholder="Last name">
+            <input data-t="t38" type="text" name="email" placeholder="Email">
+            <input data-t="t39" type="text" name="phone" placeholder="Mobile Number">
+            <input data-t="t40" type="number" name="amount" placeholder="Amount">
+            <select name="currency">
+              <option data-t="t41" value disabled selected>Choose Currency</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="AED">AED</option>
+              <option value="KZT">KZT</option>
+              <option value="RUB">RUB</option>
+              <option value="TURKISH LIRA">TURKISH LIRA</option>
+            </select>
+
+            <div class="range">
+              <label class="txt1" for="invest-rounds"data-t="t42">How Long (Investment rounds)</label>
+              <input id="invest-rounds" type="range" max="11" value="1" name="invest-rounds">
+              <div class="marks buttxt">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+                <p>9</p>
+                <p>10</p>
+                <p>11</p>
+                <p>12</p>
+              </div>
+            </div>
+
+            <p class="ps" data-t="t43">*One investment round lasts 30 Days. Then we have 10 day grace period. After that next investment round starts</p>
+            
+            <button type="submit" data-t="t431">Calculate Investment</button>
+          </form>
+            
+        </div>
+      </div>
+
+      <footer class="footer screen-top-line">
+        <div class="content">
+          <div class="content-item">
+            <img src="img/Logo.png" alt="" class="img-logo">
+          </div>
+          <div class="content-item">
+            <h4 class="hdl4-130" data-t="t44">Have any Questions?</h4>
+            <a href="https://wa.me/447946704593" target="_blank" class="buttxt link" data-t="t45">WhatsApp: +44 7946 704593</a>
+            <p class="buttxt" data-t="t46">Address: 111 Power Rd, Chiswick, London W4 4PY</p>
+            <a href="mailto:request@deepreef.uk" target="_blank" class="buttxt link" data-t="t47">Email: request@deepreef.uk</a>
+          </div>
+
+          <div class="content-item">
+            <h4 class="hdl4-130" data-t="t48">Quick links</h4>
+            <a href="index.html" class="buttxt link" data-t="t49">Home</a>
+            <a href="servises.html" class="buttxt link" data-t="t50">Our Services</a>
+            <a href="contact.html" class="buttxt link" data-t="t51">Contact us</a>
+            <a href="calculator.html" class="buttxt link" data-t="t52">Calculator</a>
+            <a href="https://www.instagram.com/deep_reef_investment" class="buttxt link" data-t="t53">Instagram</a>
+          </div>
+
+          <div class="content-item">
+            <h4 class="hdl4-130" data-t="t54">Sign up to receive our<br>updates and offers</h4>
+            <a href="/" class="calc-investments buttxt btn big-btn" data-t="t55">Sign up  to updates</a>
+          </div>
+        </div>
+        <div class="ps">
+          <p class="buttxt">©2022 Copyright All Rights Reserved by Deep Reef - v1.0</p>
+          <p class="buttxt">Created by <span class="colorBlue">space.</span></p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/rightMenu.js"></script>
+  <script src="js/scrollIndicator.js"></script>
+  <script src="js/translateCalculator.js"></script>
+  <script src="js/lang-dropdown.js"></script>
+  <script src="js/video-popup.js"></script>
+</body>
+</html>

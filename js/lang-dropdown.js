@@ -8,7 +8,11 @@ function LangDrop(container) {
     console.log(this.lang)
 
     for(const key in translates[this.lang]) {
-      document.querySelector(`[data-t="${key}"]`).innerHTML = translates[this.lang][key]
+      const node = document.querySelector(`[data-t="${key}"]`)
+      if(['INPUT', 'TEXTAREA'].reduce((c, itm) => node.nodeName === itm ? 1 : c, 0)) {
+        node.placeholder = translates[this.lang][key]
+      }
+      else node.innerHTML = translates[this.lang][key]
     }
 
     recheckK()

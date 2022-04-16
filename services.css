@@ -1,0 +1,39 @@
+.screen3 .screen3-cases {
+  flex-wrap: wrap;
+}
+
+.screen3 .screen3-cases .case-item {
+  width: 480px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 1600px) {
+  .screen3 .screen3-cases .case-item {
+    width: 350px;
+    margin-right: 70px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .screen3 .screen3-cases .case-item {
+    width: 250px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .screen3 .screen3-cases .case-item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .screen3 .screen3-cases .case-item {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
