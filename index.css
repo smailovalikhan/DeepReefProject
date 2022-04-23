@@ -130,7 +130,10 @@ body {overflow-x: hidden}
 
 .screen1 .nav .menu-button-wrapper {display: none}
 
-.screen1 .logo-counter img {margin-right: 50px}
+.screen1 .logo-counter img {
+  width: 100px;
+  margin-right: 50px;
+}
 
 .screen1 .txt-content h1 {margin-bottom: 40px}
 
