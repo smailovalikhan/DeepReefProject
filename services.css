@@ -30,7 +30,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .screen3 .screen3-cases .case-item {
     width: 100%;
     margin-right: 0px;

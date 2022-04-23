@@ -58,6 +58,6 @@
   .screen4 form .marks p {font-size: 14px}
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .screen4 form .marks p {font-size: 12px}
 }

@@ -429,6 +429,7 @@ body {overflow-x: hidden}
     top: 30px;
     left: unset;
     right: 30px;
+    z-index: 1;
   }
   
 

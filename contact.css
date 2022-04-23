@@ -22,7 +22,7 @@
   .screen5 img {width: 100%}
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .screen5 .content form {
     width: 100%;
     max-width: 100%;
