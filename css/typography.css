@@ -124,7 +124,7 @@
   .hdl3 {font-size: 30px} 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .hdl1 {
     font-size: 47px;
     line-height: 110%;
