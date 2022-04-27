@@ -108,7 +108,7 @@ body {overflow-x: hidden}
   z-index: 1;
 }
 
-.screen1-bg img {
+.screen1-bg video {
   position: absolute;
   top: 0;
   right: 0;
@@ -343,7 +343,7 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
   display: flex;
   align-items: center;
   margin-top: 220px;
-  padding-left: 13%;
+  padding: 0 13%;
 }
 
 .screen5 .content {
@@ -365,7 +365,7 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
   margin-bottom: 82px;
 }
 
-.screen5 img {
+.screen5 video {
   width: 50%;
   z-index: -1;
 }
