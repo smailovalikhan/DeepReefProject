@@ -9,7 +9,7 @@
 .hdl1 {
   font-size: 110px;
   line-height: 110%;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .hdl2 {
@@ -124,11 +124,18 @@
   .hdl3 {font-size: 30px} 
 }
 
+@media (max-width: 496px) {
+  .hdl1 {font-size: 70px}
+}
+
 @media (max-width: 400px) {
   .hdl1 {
     font-size: 47px;
     line-height: 110%;
   }
+
+  .hdl4-130 {font-size: 24px}
+  .buttxt {font-size: 14px}
 
   .hdl2 {font-size: 30px}
 

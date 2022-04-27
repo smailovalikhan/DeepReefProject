@@ -59,5 +59,6 @@
 }
 
 @media (max-width: 400px) {
+  .screen1 .txt-content h1 {font-size: 46px}
   .screen4 form .marks p {font-size: 12px}
 }

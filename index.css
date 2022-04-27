@@ -143,10 +143,10 @@ body {overflow-x: hidden}
 
 .screen1 .description-container p:first-child {
   margin-right: 100px;
-  width: 477px;
+  max-width: 477px;
 }
 
-.screen1 .description-container p:nth-child(2) {width: 421px}
+.screen1 .description-container p:nth-child(2) {max-width: 421px}
 
 .screen1 .txt-content .btn.big-btn {
   margin-top: 50px;
@@ -155,7 +155,28 @@ body {overflow-x: hidden}
 
 /* SCREEN 2 */
 
-.screen2 {margin-top: 250px}
+.screen2 {
+  margin-top: 250px;
+  position: relative;
+}
+
+.screen2 .screen2-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.screen2 .screen2-bg .particle1 {
+  width: 500px;
+  height: 500px;
+  background-color: #0085FF;
+  top: 20%;
+  right: 0;
+  position: absolute;
+  border-radius: 1000px;
+  filter: blur(200px);
+  opacity: .15;
+}
 
 .screen2 .mission {
   display: flex;
@@ -207,6 +228,8 @@ body {overflow-x: hidden}
 
 .screen3 .top-nav .nav-description {margin-right: 150px}
 
+body[data-lang="ru"] .hdl2 {font-size: 46px}
+
 .screen3 .top-nav .nav-description .product-title {margin-right: 64px}
 
 .screen3 .top-nav .slider-nav .slider-nav-nums {margin-bottom: 50px}
@@ -218,8 +241,8 @@ body {overflow-x: hidden}
 
 .screen3 .top-nav .slider-nav .slider-nav-arrows div {
   font-size: 35px;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: 1px solid #fff;
   display: flex;
   justify-content: center;
@@ -227,12 +250,21 @@ body {overflow-x: hidden}
   cursor: pointer;
   transition: .1s;
 }
+
+.screen3 .top-nav .slider-nav .slider-nav-arrows div svg {
+  width: 25%;
+  height: 25%;
+}
+.screen3 .top-nav .slider-nav .slider-nav-arrows div:last-child svg {transform: scaleX(-1)}
+
 .screen3 .top-nav .slider-nav .slider-nav-arrows div:first-child {margin-right: 18px}
 
 .screen3 .top-nav .slider-nav .slider-nav-arrows div:hover {
   border-color: #0085FF;
   color: #0085FF;
 }
+.screen3 .top-nav .slider-nav .slider-nav-arrows div:hover svg path {transition: .1s}
+.screen3 .top-nav .slider-nav .slider-nav-arrows div:hover svg path {fill: #0085FF}
 
 .screen3 .screen3-cases {
   width: 100%;
@@ -257,6 +289,7 @@ body {overflow-x: hidden}
 .screen3 .screen3-cases .case-item .case-item-title {margin-bottom: 25px}
 
 .screen3 .screen3-cases .case-item .case-item-description {opacity: .7}
+
 
 /* SCREEN 4 */
 
@@ -334,6 +367,7 @@ body {overflow-x: hidden}
 
 .screen5 img {
   width: 50%;
+  z-index: -1;
 }
 
 /* SCREEN 6 */
@@ -379,6 +413,8 @@ body {overflow-x: hidden}
 
 .footer .content .content-item a {display: block}
 
+.footer .content .content-item  .img-logo {width: 100px}
+
 .footer .content .content-item .btn {display: inline-block}
 
 .footer .ps {
@@ -423,7 +459,8 @@ body {overflow-x: hidden}
   
   .screen1-bg .particle1,
   .screen1-bg p,
-  .screen1 .nav .counter, 
+  .screen1 .nav .counter,
+  .screen1 .language-dropdown,
   .screen1 .calc-investments {display: none}
 
   .screen1 .nav .menu-button-wrapper {
@@ -432,19 +469,22 @@ body {overflow-x: hidden}
     top: 30px;
     left: unset;
     right: 30px;
-    z-index: 9;
+    z-index: 1;
   }
   
-
   .screen1 .txt-content h1 {
     margin-top: 290px;
     margin-bottom: 45px;
   }
 
-  .screen1 .description-container p:first-child {width: 430px}
-  .screen1 .description-container p:nth-child(2) {width: 375px}
+  .screen1 .description-container p {width: 50%}
+
+  .screen1 .description-container p:first-child {max-width: 430px}
+  .screen1 .description-container p:nth-child(2) {max-width: 375px}
 
   .screen2 {margin-top: 190px}
+
+  .screen2 .screen2-bg .particle1 {transform: translateX(30%)}
 
   .screen2 .mission {display: unset}
 
@@ -484,6 +524,9 @@ body {overflow-x: hidden}
 
   .screen4 .description p:first-child {margin-right: 100px}
 
+  .screen4-bg img {display: none}
+  .screen4 .mob-img {display: block}
+
   .screen5 {
     margin-top: 130px;
     padding: 0;
@@ -522,6 +565,14 @@ body {overflow-x: hidden}
   .footer .ps *:first-child {margin-bottom: 25px}
 }
 
+@media (max-width: 938px) {
+  .screen3 .top-nav .nav-description {font-size: 36px}
+}
+
+@media (max-width: 822px) {
+  .screen3 .top-nav .slider-nav {margin-top: 36px}
+}
+
 @media (max-width: 640px) {
 
   .main-content-wrapper {padding: 50px 20px}
@@ -531,8 +582,6 @@ body {overflow-x: hidden}
     height: unset;
   }
 
-  .screen1 .language-dropdown {display: none}
-
   .screen1 .txt-content h1 {
     margin-top: 190px;
     margin-bottom: 30px;
@@ -540,8 +589,10 @@ body {overflow-x: hidden}
 
   .screen1 .description-container {
     flex-direction: column;
-    width: 435px;
+    max-width: 435px;
   }
+
+  .screen1 .description-container p {width: unset}
 
   .screen1 .description-container p:first-child {
     margin-right: 0;
@@ -552,10 +603,18 @@ body {overflow-x: hidden}
 
   .screen2 {margin-top: 150px}
 
+  .screen2 .screen2-bg .particle1 {transform: translateX(50%)}
+
   .screen2 .mission h3 {
     width: 510px;
     margin-bottom: 60px;
   }
+
+  .screen2 .mission .title {
+    max-width: 100%;
+  }
+
+  .screen2 .cases .case-item {margin-bottom: 50px}
 
   .screen2 .cases .case-item:first-child {max-width: 84%}
   .screen2 .cases .case-item:nth-child(2) {max-width: 70%}
@@ -587,8 +646,6 @@ body {overflow-x: hidden}
 
   .screen4 {margin-top: 150px}
 
-  .screen4-bg img {display: none}
-
   .screen4 .screen4-title span {
     display: block;
     margin-right: 0;
@@ -599,8 +656,6 @@ body {overflow-x: hidden}
     margin-right: 0;
     margin-bottom: 25px;
   }
-
-  .screen4 .mob-img {display: block}
 
   .screen5 .content .title {margin-bottom: 30px}
 

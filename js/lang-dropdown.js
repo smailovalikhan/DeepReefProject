@@ -29,6 +29,8 @@ function LangDrop(container) {
         
         this.lang = this.div.querySelector('.main p[data-lang]').dataset.lang
         this.setTranslate()
+
+        document.body.dataset.lang = this.lang
       }
     }
     this.toggleDrop()

@@ -35,9 +35,12 @@
   left: 0;
 }
 
-@media (max-width: 320px) {
-  .btn {width: 100% }
+@media (max-width: 460px) {
+  .btn {width: 100%}
 }
+
+@media (max-width: 320px) {
+  
 
 .card-link {
   display: block;

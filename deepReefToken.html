@@ -17,6 +17,36 @@
   <link rel="stylesheet" href="css/video-popup.css">
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="index.css">
+  <style>
+    body[data-lang="ru"] p[data-t="t3"] {max-width: 684px !important}
+
+    .screen3 .screen3-cases .case-item {
+      height: unset;
+      min-height: unset;
+      padding-bottom: 50px;
+      margin-bottom: 20px;
+    }
+
+    .footer {margin-top: 250px}
+
+    @media (max-width: 1600px) {
+      .footer {margin-top: 140px}
+    }
+
+    @media (max-width: 400px) {
+      .screen3 .screen3-cases .case-item {padding-bottom: 40px}
+
+      .footer {margin-top: 100px}
+    }
+
+    @media (min-width: 640px) and (max-width: 1600px) {
+      .screen3 .screen3-cases .case-item {
+        margin-right: 5%;
+        width: 46.3%;
+        max-width: 500px;
+      }
+    }
+  </style>
 </head>
 <body class="fillBG">
 
@@ -86,7 +116,7 @@
             <nav class="nav">
               <div class="logo-counter nav">
                 <img src="img/Logo.png" alt="" class="img-logo">
-                <p class="counter txt2"><span id="currentSlide">01</span>/<span id="maxSlide">06</span></p>
+                <p class="counter txt2"><span id="currentSlide">01</span>/<span id="maxSlide">02</span></p>
               </div>
             </nav>
           </div>
@@ -137,7 +167,7 @@
         </div>
       </div>
 
-      <footer class="footer screen-top-line" style="margin-top: 250px">
+      <footer class="footer screen-top-line">
         <div class="content">
           <div class="content-item">
             <img src="img/Logo.png" alt="" class="img-logo">
@@ -173,33 +203,8 @@
 
   <script src="js/rightMenu.js"></script>
   <script src="js/scrollIndicator.js"></script>
-  <script src="js/translateIndex.js"></script>
+  <script src="js/translateDRT.js"></script>
   <script src="js/lang-dropdown.js"></script>
   <script src="js/video-popup.js"></script>
-  <script>
-    // SCREEN 3 SLIDER SCRIPT
-
-    const screen3Slider = {
-      arw_l: document.querySelector('.slider-nav-arrows .left'),
-      arw_r: document.querySelector('.slider-nav-arrows .right'),
-      firstItem: document.querySelector('.screen3-cases .case-item:first-child'),
-      slidesCount: document.querySelectorAll('.screen3-cases .case-item').length,
-      curSlide: 0,
-      setSlide() {this.firstItem.style.marginLeft = this.curSlide * -this.slideStep + 'px'},
-      moveSlide(dir) {
-        if(dir > 0 && this.curSlide < this.slidesCount - 1) this.curSlide++
-        else if(dir < 0 && this.curSlide > 0) this.curSlide--
-        
-        this.setSlide()
-      }
-    }
-
-    screen3Slider.slideStep = parseFloat(getComputedStyle(screen3Slider.firstItem).width) + parseFloat(getComputedStyle(screen3Slider.firstItem).marginRight)
-    screen3Slider.firstItem.style =  'margin-left: 0; transition: .1s'
-
-    screen3Slider.arw_l.onclick = () => screen3Slider.moveSlide(-1)
-    screen3Slider.arw_r.onclick = () => screen3Slider.moveSlide(1)
-
-  </script>
 </body>
 </html>

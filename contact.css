@@ -1,6 +1,30 @@
-.screen3 .screen3-cases {flex-wrap: wrap}
+.screen5.screen6 {
+  display: block;
+  padding-right: unset;
+}
 
-.screen3 .screen3-cases .case-item {margin-bottom: 80px}
+@media (min-width: 1024px) {
+  .screen5 {padding-right: 13%}
+}
+
+.screen3 .screen3-cases .case-item {
+  margin-bottom: 80px;
+  width: 30%;
+  margin-right: 4%;
+  min-height: unset;
+  max-height: 300px;
+}
+
+@media (max-width: 800px) {
+  .screen3 .screen3-cases {flex-wrap: wrap}
+
+  .screen3 .screen3-cases .case-item {
+    margin-right: 0;
+    max-width: 80%;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
 
 .screen5 .content .description {
   margin-bottom: 40px;
@@ -18,7 +42,18 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 1024px) {
+  .screen5 {display: flex}
+}
+
 @media (max-width: 640px) {
+  .screen5 {display: block}
+
+  .screen3 .screen3-cases .case-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
   .screen5 img {width: 100%}
 }
 
