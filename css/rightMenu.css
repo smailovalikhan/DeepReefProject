@@ -39,6 +39,10 @@
 
 .right-menu-popup .menu .content .secondary a {margin-bottom: 25px}
 .right-menu-popup .menu .content .secondary *:last-child {margin-bottom: 120px}
+.right-menu-popup .menu .content .secondary a img {
+  margin-bottom: 0 !important;
+  margin-left: 10px;
+}
 
 @media (max-width: 1024px) {
   .right-menu-popup.right-menu-hidden .menu {transform: translateX(100%)}

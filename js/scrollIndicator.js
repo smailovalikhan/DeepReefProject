@@ -1,6 +1,6 @@
 const scrollIndicator = document.querySelector('#scroll-indicator')
 
-let  k = (window.innerHeight - 120) / document.documentElement.scrollTopMax
+let  k = (window.innerHeight - 120) / document.documentElement.scrollHeight
 scrollIndicator.style.top = document.documentElement.scrollTop * k + 'px'
 
 document.addEventListener('scroll', () => {
@@ -8,6 +8,6 @@ document.addEventListener('scroll', () => {
 })
 
 function recheckK() {
-  k = (window.innerHeight - 120) / document.documentElement.scrollTopMax
+  k = (window.innerHeight - 120) / document.documentElement.scrollHeight
   scrollIndicator.style.top = document.documentElement.scrollTop * k + 'px'
 }

@@ -14,12 +14,33 @@
   <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/rightMenu.css">
   <link rel="stylesheet" href="css/language-dropdowns.css">
-  <link rel="stylesheet" href="css/video-popup.css">
+  <link rel="stylesheet" href="css/popups.css">
   <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="calculator.css">
 </head>
 <body class="fillBG">
+
+  <div id="calculate-invests-modal" class="popup full-hidden">
+    <div class="content-container">
+      <div class="close-button"><img src="img/close.svg" alt=""></div>
+
+      <p>Number of tokens</p>
+      <p class="colorBlue">500 tokens</p>
+    </div>
+  </div>
+
+  <div id="recive-updates" class="popup full-hidden">
+    <div class="content-container">
+      <div class="close-button"><img src="img/close.svg" alt=""></div>
+
+      <p>Subscribe to receive our updates and offers</p>
+      <div class="e-field">
+        <input type="text" placeholder="E-mail">
+        <a class="btn big-btn buttxt">Subscribe</a>
+      </div>
+    </div>
+  </div>
 
   <div id="video" class="video-popup hidden" style="display: none">
     <video controls="" src="https://deepreef-user-picture.s3.eu-west-1.amazonaws.com/deepreef+(1).mp4" width="100%">Your browser does not support the video tag.</video>
@@ -39,7 +60,10 @@
         <div class="secondary content-item">
           <a href="index.html" class="buttxt linkLine" data-t="t59">Home</a><br>
           <a href="deepReefToken.html" class="buttxt linkLine" data-t="t60">Deep Reef Token</a><br>
-          <a href="calculator.html" class="buttxt linkLine" data-t="t61">Calculate Investment →</a><br>
+          <a href="calculator.html" class="buttxt linkLine">
+            <span data-t="t61">Calculate Investment</span>
+            <img src="img/arrow-menu.svg" alt="arrow">
+          </a><br>
           <a class="buttxt linkLine video-btn" data-t="t62">Video about Deep Reef</a><br>
         </div>
 
@@ -130,20 +154,37 @@
             <input data-t="t38" type="text" name="email" placeholder="Email">
             <input data-t="t39" type="text" name="phone" placeholder="Mobile Number">
             <input data-t="t40" type="number" name="amount" placeholder="Amount">
-            <select name="currency">
-              <option data-t="t41" value disabled selected>Choose Currency</option>
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-              <option value="AED">AED</option>
-              <option value="KZT">KZT</option>
-              <option value="RUB">RUB</option>
-              <option value="TURKISH LIRA">TURKISH LIRA</option>
-            </select>
+
+            <div class="select">
+              <div class="select__header">
+                <div class="select__current" data-t="t41">Choose Currency</div>
+                <div class="select__icon">
+                  <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.31055 9.71753L0.283203 0.691162H18.3369L9.31055 9.71753Z" fill="white"/>
+                    </svg>
+                </div>
+              </div>
+            
+              <div class="select__body">
+                <div class="select__item" data-value="USD">USD</div>
+                <div class="select__item" data-value="EUR">EUR</div>
+                <div class="select__item" data-value="GBP">GBP</div>
+                <div class="select__item" data-value="AED">AED</div>
+                <div class="select__item" data-value="KZT">KZT</div>
+                <div class="select__item" data-value="RUB">RUB</div>
+                <div class="select__item" data-value="TURKISH_LIRA">TURKISH LIRA</div>
+              </div>
+
+              <div class="true-select">
+                <select name="currency"></select>
+              </div>
+            </div>
+
+            <!-- <input id="invest-rounds" type="range" max="11" value="1" name="invest-rounds" class="custom-slider slider-progress"> -->
 
             <div class="range">
               <label class="txt1" for="invest-rounds"data-t="t42">How Long (Investment rounds)</label>
-              <input id="invest-rounds" type="range" max="11" value="1" name="invest-rounds">
+              <input id="invest-rounds" type="range" max="11" value="1" name="invest-rounds" class="custom-slider slider-progress">
               <div class="marks buttxt">
                 <p>1</p>
                 <p>2</p>
@@ -162,7 +203,7 @@
 
             <p class="ps" data-t="t43">*One investment round lasts 30 Days. Then we have 10 day grace period. After that next investment round starts</p>
             
-            <button type="submit" data-t="t431">Calculate Investment</button>
+            <div class="submit-button calculate-form-submit-button" data-t="t431">Calculate Investment</div>
           </form>
             
         </div>
@@ -191,7 +232,7 @@
 
           <div class="content-item">
             <h4 class="hdl4-130" data-t="t54">Sign up to receive our<br>updates and offers</h4>
-            <a href="/" class="calc-investments buttxt btn big-btn" data-t="t55">Sign up  to updates</a>
+            <p id="recive-updates-button" class="calc-investments buttxt btn big-btn" data-t="t55">Sign up  to updates</p>
           </div>
         </div>
         <div class="ps">
@@ -206,6 +247,13 @@
   <script src="js/scrollIndicator.js"></script>
   <script src="js/translateCalculator.js"></script>
   <script src="js/lang-dropdown.js"></script>
-  <script src="js/video-popup.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+
+    // CALCULATE INVESTS
+
+    popup('calculate-invests-modal', document.querySelector('#form .calculate-form-submit-button'))
+  </script>
 </body>
 </html>

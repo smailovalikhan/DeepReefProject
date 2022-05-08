@@ -45,7 +45,7 @@ form textarea::-moz-focus-inner {
   border: none !important;
 }
 
-form button[type="submit"] {
+form .submit-button {
   background-color: #1952AD;
   font-size: 18px;
   line-height: 130%;
@@ -54,6 +54,169 @@ form button[type="submit"] {
   border: none;
   cursor: pointer;
   transition: .1s;
+  text-align: center;
 }
 
 form button[type="submit"]:hover {opacity: .7}
+
+/* CUSTOM RANGE SLIDER */
+
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].custom-slider {
+  height: 2px;
+  -webkit-appearance: none;
+}
+
+/*progress support*/
+input[type=range].custom-slider.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 25px + var(--ratio) * (100% - 25px));
+}
+
+input[type=range].custom-slider:focus {
+  outline: none;
+}
+
+/*webkit*/
+input[type=range].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: #1C71F8;
+  border: none;
+  box-shadow: none;
+  margin-top: calc(2px * 0.5 - 25px * 0.5);
+}
+
+input[type=range].custom-slider::-webkit-slider-runnable-track {
+  height: 2px;
+  border: none;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+
+input[type=range].custom-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(#1C71F8,#1C71F8) 0/var(--sx) 100% no-repeat, #fff;
+}
+
+/*mozilla*/
+input[type=range].custom-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: #1C71F8;
+  border: none;
+  box-shadow: none;
+}
+
+input[type=range].custom-slider::-moz-range-track {
+  height: 2px;
+  border: none;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+
+input[type=range].custom-slider.slider-progress::-moz-range-track {
+  background: linear-gradient(#1C71F8,#1C71F8) 0/var(--sx) 100% no-repeat, #fff;
+}
+
+/*ms*/
+input[type=range].custom-slider::-ms-fill-upper {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].custom-slider::-ms-fill-lower {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].custom-slider::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: #1C71F8;
+  border: none;
+  box-shadow: none;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+input[type=range].custom-slider::-ms-track {
+  height: 2px;
+  border-radius: 0;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type=range].custom-slider.slider-progress::-ms-fill-lower {
+  height: 2px;
+  border-radius: 0px 0 0 0px;
+  margin: -undefined 0 -undefined -undefined;
+  background: #1C71F8;
+  border: none;
+  border-right-width: 0;
+}
+
+/* CUSTOM SELECT */
+
+.select {
+	position: relative;
+	width: 100%;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+.select.is-active .select__header {
+  background-color: #1952AD;
+  border-color: #1952AD;
+}
+.select.is-active .select__header .select__current {color: #fff}
+.select.is-active .select__header .select__icon {opacity: 1}
+.select.is-active .select__body {display: block}
+
+.select__header {
+	border: 1px solid #656565;
+	cursor: pointer;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px;
+}
+.select__current {
+	font-size: 18px;
+	line-height: 130%;
+  color: rgba(255, 255, 255, .6);
+}
+.select__icon {
+	flex-shrink: 0;
+  opacity: .4;
+}
+
+.select__body {
+  background-color: #1952AD;
+	border-top: 1px solid #fff;
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 100%;
+}
+.select__item {
+	cursor: pointer;
+	padding: 26px;
+  font-size: 18px;
+	line-height: 130%;
+}
+
+.select__item:hover {
+	background-color: #383C4B;
+}
+
+.select .true-select {display: none}

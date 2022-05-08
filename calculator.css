@@ -1,3 +1,46 @@
+/* POPUPS */
+
+#calculate-invests-modal .content-container {padding: 118px 68px}
+
+#calculate-invests-modal p {font-size: 40px}
+#calculate-invests-modal p:last-child {
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+@media (max-width: 1024px) {
+  #calculate-invests-modal .content-container {padding: 51px 37px}
+
+  #calculate-invests-modal p {font-size: 30px}
+  #calculate-invests-modal p:last-child {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  #calculate-invests-modal .content-container {padding: 88px 52px}
+
+  #calculate-invests-modal p:last-child {margin-top: 30px}
+}
+
+@media (max-width: 450px) {
+  #calculate-invests-modal .content-container {
+    padding: 38px 23px;
+    width: 90%;
+  }
+
+  #calculate-invests-modal p {font-size: 14px}
+  #calculate-invests-modal p:last-child {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+}
+
+/* STYLES */
+
+.screen1 .txt-content h1 {font-size: 76px}
+
 .screen4 form {
   display: flex;
   justify-content: space-between;
@@ -5,10 +48,11 @@
   flex-wrap: wrap;
   max-width: 1200px;
   margin-left: 160px;
+  margin-right: 10%;
 }
 
 .screen4 form input,
-.screen4 form select {
+.screen4 form .select {
   width: 48.8%;
   margin-bottom: 30px;
 }
@@ -17,14 +61,15 @@
 
 .screen4 form label,
 .screen4 .range,
-.screen4 form input[type="range"] {width: 100%}
+.screen4 form input[type="range"] {
+  padding: 0;
+  width: 100%;
+}
 
 .screen4 form input[type="range"] {
   margin: 0;
-  display: block;
-  padding-top: 40px;
-  padding-bottom: 10px;
-  height: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .screen4 form .marks {
@@ -32,28 +77,35 @@
   justify-content: space-between;
 }
 
-.screen4 form .marks p {opacity: 1}
+.screen4 form .marks p {
+  opacity: 1;
+  width: 20px;
+  text-align: center;
+}
 .screen4 form .marks p:first-child {margin: 0}
 
 .screen4 .ps {margin-top: 60px}
 
-.screen4 form button[type="submit"] {
+.screen4 form .submit-button {
   width: 100%;
   margin-top: 60px;
 }
 
 @media (max-width: 1024px) {
   .screen4 form input,
-  .screen4 form select {width: 46.8%}
+  .screen4 form .select {width: 46.8%}
 
   .screen4 form input[type="range"] {padding-bottom: 0}
 }
 
 @media (max-width: 640px) {
-  .screen4 form {margin-left: 0}
+  .screen4 form {
+    margin-left: 0;
+    margin-right: 0;
+  }
   
   .screen4 form input,
-  .screen4 form select {width: 100%}
+  .screen4 form .select {width: 100%}
 
   .screen4 form .marks p {font-size: 14px}
 }

@@ -1,3 +1,19 @@
+function translatePage(lang) {
+  for(const key in translates[lang]) {
+    const node = document.querySelector(`[data-t="${key}"]`)
+    if(node) {
+      if(['INPUT', 'TEXTAREA'].reduce((c, itm) => node.nodeName === itm ? 1 : c, 0)) {
+        node.placeholder = translates[lang][key]
+      }
+      else node.innerHTML = translates[lang][key]
+    }
+  }
+}
+
+translatePage(localStorage.getItem('pageLang') || 'en')
+document.body.dataset.lang = localStorage.getItem('pageLang') || 'en'
+recheckK()
+
 function LangDrop(container) {
   this.div = container
   this.lang = this.div.querySelector('.main p[data-lang]').dataset.lang
@@ -7,14 +23,7 @@ function LangDrop(container) {
   this.setTranslate = () => {
     console.log(this.lang)
 
-    for(const key in translates[this.lang]) {
-      const node = document.querySelector(`[data-t="${key}"]`)
-      if(['INPUT', 'TEXTAREA'].reduce((c, itm) => node.nodeName === itm ? 1 : c, 0)) {
-        node.placeholder = translates[this.lang][key]
-      }
-      else node.innerHTML = translates[this.lang][key]
-    }
-
+    translatePage(this.lang)
     recheckK()
   }
 
@@ -31,6 +40,7 @@ function LangDrop(container) {
         this.setTranslate()
 
         document.body.dataset.lang = this.lang
+        localStorage.setItem('pageLang', this.lang)
       }
     }
     this.toggleDrop()

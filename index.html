@@ -14,10 +14,22 @@
   <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/rightMenu.css">
   <link rel="stylesheet" href="css/language-dropdowns.css">
-  <link rel="stylesheet" href="css/video-popup.css">
+  <link rel="stylesheet" href="css/popups.css">
   <link rel="stylesheet" href="index.css">
 </head>
 <body class="fillBG">
+
+  <div id="recive-updates" class="popup full-hidden">
+    <div class="content-container">
+      <div class="close-button"><img src="img/close.svg" alt=""></div>
+
+      <p>Subscribe to receive our updates and offers</p>
+      <div class="e-field">
+        <input type="text" placeholder="E-mail">
+        <a class="btn big-btn buttxt">Subscribe</a>
+      </div>
+    </div>
+  </div>
 
   <div id="video" class="video-popup hidden" style="display: none">
     <video controls="" src="https://deepreef-user-picture.s3.eu-west-1.amazonaws.com/deepreef+(1).mp4" width="100%">Your browser does not support the video tag.</video>
@@ -37,7 +49,10 @@
         <div class="secondary content-item">
           <a href="index.html" class="buttxt linkLine" data-t="t59">Home</a><br>
           <a href="deepReefToken.html" class="buttxt linkLine" data-t="t60">Deep Reef Token</a><br>
-          <a href="calculator.html" class="buttxt linkLine" data-t="t61">Calculate Investment <span style="margin-left: 10px">→</span></a><br>
+          <a href="calculator.html" class="buttxt linkLine">
+            <span data-t="t61">Calculate Investment</span>
+            <img src="img/arrow-menu.svg" alt="arrow">
+          </a><br>
           <a class="buttxt linkLine video-btn" data-t="t62">Video about Deep Reef</a><br>
         </div>
 
@@ -288,7 +303,7 @@
 
           <div class="content-item">
             <h4 class="hdl4-130" data-t="t54">Sign up to receive our<br>updates and offers</h4>
-            <a href="/" class="calc-investments buttxt btn big-btn" data-t="t55">Sign up  to updates</a>
+            <p id="recive-updates-button" class="calc-investments buttxt btn big-btn" data-t="t55">Sign up  to updates</p>
           </div>
         </div>
         <div class="ps">
@@ -303,7 +318,7 @@
   <script src="js/scrollIndicator.js"></script>
   <script src="js/translateIndex.js"></script>
   <script src="js/lang-dropdown.js"></script>
-  <script src="js/video-popup.js"></script>
+  <script src="js/popups.js"></script>
   <script>
     function txtNum(num) {
       return num < 10 ? '0' + num : num

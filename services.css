@@ -59,4 +59,10 @@
   }
 
   .screen3 .top-nav .nav-description {width: 100%}
+  
+  .screen5 .content .title {font-size: 30px}
+}
+
+@media (max-width: 400px) {
+  .screen1 .txt-content .btn.big-btn {margin-top: 20px}
 }

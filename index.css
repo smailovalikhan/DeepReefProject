@@ -224,6 +224,7 @@ body {overflow-x: hidden}
 .screen3 .top-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .screen3 .top-nav .nav-description {margin-right: 150px}
@@ -317,7 +318,6 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
 
 .screen4 .description {
   display: flex;
-  flex-wrap: wrap;
   margin-top: 40px;
 }
 
@@ -466,7 +466,7 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
   .screen1 .nav .menu-button-wrapper {
     display: block;
     transform: rotate(90deg);
-    top: 30px;
+    top: 10px;
     left: unset;
     right: 30px;
     z-index: 1;
@@ -496,7 +496,12 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
     margin-bottom: 70px;
   }
 
-  .screen2 .cases {flex-wrap: wrap}
+  .screen2 .cases {
+    flex-wrap: wrap;
+    padding-right: 5%;
+  }
+
+  .screen2 .cases .case-item {margin-bottom: 40px}
 
   .screen2 .cases .case-item:first-child {max-width: 45%}
   .screen2 .cases .case-item:nth-child(2) {max-width: 39%}
@@ -514,36 +519,36 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
     margin-right: 25px;
   }
 
-  .screen3 .top-nav .nav-description {margin-right: 30px}
+  .screen3 .top-nav {align-items: flex-start}
+  
+  .screen3 .top-nav .nav-description {
+    margin-right: 0;
+    width: 70%;
+  }
   .screen3 .top-nav .slider-nav .slider-nav-arrows div {
     width: 70px;
     height: 70px;
   }
 
-  .screen4-bg img {transform: translateY(-70%)}
-
   .screen4 .description p:first-child {margin-right: 100px}
-
-  .screen4-bg img {display: none}
-  .screen4 .mob-img {display: block}
 
   .screen5 {
     margin-top: 130px;
     padding: 0;
-    display: block;
   }
 
+  .screen5.screen6 {display: block}
+  .screen5 {display: flex}
   .screen5 .content {
-    width: 100%;
+    width: 40%;
     margin-bottom: 50px;
   }
+  .screen5 video {width: 60%}
 
   .screen5 .content .description {
     margin-right: 26%;
     margin-bottom: 60px;
   }
-
-  .screen5 img {width: 85%}
 
   .screen6 {
     margin-top: 125px;
@@ -582,6 +587,8 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
     height: unset;
   }
 
+  .screen1 .nav .menu-button-wrapper {top: 30px}
+
   .screen1 .txt-content h1 {
     margin-top: 190px;
     margin-bottom: 30px;
@@ -614,6 +621,8 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
     max-width: 100%;
   }
 
+  .screen2 .cases {padding-right: 0}
+
   .screen2 .cases .case-item {margin-bottom: 50px}
 
   .screen2 .cases .case-item:first-child {max-width: 84%}
@@ -621,6 +630,8 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
   .screen2 .cases .case-item:last-child {max-width: 84%}
 
   .screen3 {margin-top: 150px}
+
+  .screen3 .top-nav .nav-description {width: 100%}
 
   .screen3 .top-nav .nav-description .product-title {
     margin-right: 0;
@@ -646,16 +657,29 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
 
   .screen4 {margin-top: 150px}
 
+
+  .screen4-bg img {display: none}
+  .screen4 .mob-img {display: block}
+
   .screen4 .screen4-title span {
     display: block;
     margin-right: 0;
     margin-bottom: 30px;
   }
 
+  .screen4 .description {flex-wrap: wrap}
+
   .screen4 .description p:first-child {
     margin-right: 0;
     margin-bottom: 25px;
   }
+
+  .screen5 {display: block}
+  .screen5 .content {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .screen5 video {width: 100%}
 
   .screen5 .content .title {margin-bottom: 30px}
 
@@ -666,6 +690,8 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
 
 @media (max-width: 400px) {
   .main-content-wrapper {padding: 30px 10px}
+
+  .screen1 .nav .menu-button-wrapper {top: 10px}
 
   .screen1 .language-dropdown {display: none}
 
@@ -695,7 +721,14 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
 
   .screen3 {margin-top: 100px}
 
-  .screen3 .top-nav .nav-description {width: 178px}
+  .screen3 .top-nav {align-items: flex-end}
+
+  .screen3 .top-nav .nav-description {
+    width: 60%;
+    font-size: 30px;
+  }
+
+  body[data-lang="ru"] .screen3 .top-nav .nav-description {width: 100%}
 
   .screen3 .top-nav .slider-nav {order: 0}
 

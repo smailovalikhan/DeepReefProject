@@ -46,6 +46,11 @@
   .screen5 {display: flex}
 }
 
+@media (min-width: 641px) {
+  .screen5 > .content,
+  .screen5 > img {width: 50% !important}
+}
+
 @media (max-width: 640px) {
   .screen5 {display: block}
 
@@ -53,6 +58,8 @@
     max-width: 100%;
     width: 100%;
   }
+
+  .screen5 .content form {max-width: 100%}
 
   .screen5 img {width: 100%}
 }

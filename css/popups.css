@@ -1,0 +1,166 @@
+/* POPUPS */
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .6);
+  transition: .1s;
+}
+.popup.full-hidden {display: none}
+.popup.hidden {opacity: 0}
+
+.popup .content-container {
+  width: 60%;
+  background-color: #1F1F1F;
+  padding: 50px;
+  position: relative;
+}
+
+.popup .content-container .close-button {
+  width: 25px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  transition: .1s;
+}
+.popup .content-container .close-button img {width: 100%}
+.popup .content-container .close-button:hover {opacity: .6}
+
+/* RESIEVE UPDATES */
+
+#recive-updates .content-container {
+  width: 50%;
+  padding: 100px 70px;
+}
+
+#recive-updates .content-container:first-child p {font-size: 50px}
+
+#recive-updates .content-container .e-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  margin-top: 60px;
+}
+
+#recive-updates .content-container .e-field input {
+  width: 75%;
+  height: 100%;
+  background-color: #fff;
+  padding-left: 3%;
+  font-size: 18px;
+  color: #000;
+}
+
+#recive-updates .content-container .e-field .btn {
+  height: 100%;
+  padding: 0;
+  width: 25%;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* VIDEO */
+
+.video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  opacity: 1;
+  transition: .2s;
+}
+.video-popup.hidden {
+  opacity: 0;
+}
+
+.video-popup video {
+  max-width: 920px;
+  margin: 0 20px;
+}
+
+/* MEDIA */
+
+@media (max-width: 1600px) {
+  .popup .content-container {width: 60%}
+
+  #recive-updates .content-container:first-child p {font-size: 40px}
+
+  #recive-updates .content-container .e-field {
+    margin-top: 54px;
+    height: 60px;
+  }
+
+  #recive-updates .content-container .e-field input {width: 70%}
+  #recive-updates .content-container .e-field .btn {width: 30%}
+}
+
+@media (max-width: 1024px) {
+  .popup .content-container {padding: 51px 37px}
+
+  #recive-updates .content-container {padding: 50px 40px}
+  #recive-updates .content-container .close-button {
+    width: 15px;
+    height: 15px;
+    top: 25px;
+    right: 25px;
+  }
+  #recive-updates .content-container:first-child p {font-size: 30px}
+  #recive-updates .content-container .e-field {
+    margin-top: 24px;
+    height: 40px;
+  }
+  #recive-updates .content-container .e-field > * {font-size: 14px !important}
+
+@media (max-width: 640px) {
+  .popup .content-container {padding: 88px 52px}
+  .popup .content-container .close-button {
+    width: 15px;
+    height: 15px;
+    top: 20px;
+    right: 20px;
+  }
+
+  #recive-updates .content-container {width: 80%}
+
+  #recive-updates .content-container .e-field {
+    display: block;
+    height: unset;
+  }
+
+  #recive-updates .content-container .e-field > * {
+    width: 100% !important;
+    height: 75px !important;
+    font-size: 18px !important;
+  }
+
+  #recive-updates .content-container .e-field .btn {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .popup .content-container {
+    padding: 38px 23px;
+    width: 90%;
+  }
+
+  #recive-updates .content-container {width: 90%}
+}
