@@ -3,20 +3,23 @@
 function popup(id, showButton) {
   const popup = document.querySelector('#' + id + '.popup')
 
-  function show() {
-    popup.classList.replace('full-hidden', 'hidden')
-    setTimeout(() => popup.classList.remove('hidden'), 50)
-  }
-
-  function hide() {
-    popup.classList.add('hidden')
-    setTimeout(() => popup.classList.replace('hidden', 'full-hidden'), 50)
-  }
-
-  showButton.addEventListener('click', show)
-  popup.querySelector('.close-button').addEventListener('click', hide)
+  showButton.addEventListener('click', () => popupShow(id))
+  popup.querySelector('.close-button').addEventListener('click', () => popupHide(id))
 }
 
+function popupShow(id) {
+  const popup = document.querySelector('#' + id + '.popup')
+
+  popup.classList.replace('full-hidden', 'hidden')
+  setTimeout(() => popup.classList.remove('hidden'), 50)
+}
+
+function popupHide(id) {
+  const popup = document.querySelector('#' + id + '.popup')
+
+  popup.classList.add('hidden')
+  setTimeout(() => popup.classList.replace('hidden', 'full-hidden'), 50)
+}
 
 // RECIVE-UPDATES
 

@@ -25,8 +25,8 @@
     <div class="content-container">
       <div class="close-button"><img src="img/close.svg" alt=""></div>
 
-      <p>Number of tokens</p>
-      <p class="colorBlue">500 tokens</p>
+      <p data-t="t65">Sum</p>
+      <p id="calculator-result-amount" class="colorBlue"></p>
     </div>
   </div>
 
@@ -34,10 +34,10 @@
     <div class="content-container">
       <div class="close-button"><img src="img/close.svg" alt=""></div>
 
-      <p>Subscribe to receive our updates and offers</p>
+      <p data-t="t63">Subscribe to receive our updates and offers</p>
       <div class="e-field">
         <input type="text" placeholder="E-mail">
-        <a class="btn big-btn buttxt">Subscribe</a>
+        <a class="btn big-btn buttxt" data-t="t64">Subscribe</a>
       </div>
     </div>
   </div>
@@ -203,7 +203,7 @@
 
             <p class="ps" data-t="t43">*One investment round lasts 30 Days. Then we have 10 day grace period. After that next investment round starts</p>
             
-            <div class="submit-button calculate-form-submit-button" data-t="t431">Calculate Investment</div>
+            <button type="submit" class="submit-button calculate-form-submit-button" data-t="t431">Calculate Investment</button>
           </form>
             
         </div>
@@ -254,6 +254,30 @@
     // CALCULATE INVESTS
 
     popup('calculate-invests-modal', document.querySelector('#form .calculate-form-submit-button'))
+
+    // CALCULATOR
+
+    const form = document.querySelector('#form form')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+
+      const formData = new FormData(form),
+            amount = +formData.get('amount'),
+            currensy = formData.get('currency'),
+            ir = +formData.get('invest-rounds')
+
+      let percent = 0,
+          result = amount
+
+      if(amount < 10000) percent = .065 // 1000 <= amount && 
+      else if(10000 <= amount && amount < 50000) percent = .085
+      else if(50000 <= amount) percent = .105 //  && amount < 150000
+
+      for(let i = 0; i <= ir; i++) result += result * percent
+
+      document.querySelector('#calculator-result-amount').innerHTML = result.toFixed(2) + ' ' + currensy
+    })
   </script>
 </body>
 </html>

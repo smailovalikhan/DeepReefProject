@@ -1,11 +1,13 @@
 function translatePage(lang) {
   for(const key in translates[lang]) {
-    const node = document.querySelector(`[data-t="${key}"]`)
-    if(node) {
-      if(['INPUT', 'TEXTAREA'].reduce((c, itm) => node.nodeName === itm ? 1 : c, 0)) {
-        node.placeholder = translates[lang][key]
-      }
-      else node.innerHTML = translates[lang][key]
+    const nodes = document.querySelectorAll(`[data-t="${key}"]`)
+    if(nodes.length > 0) {  
+      nodes.forEach(node => {
+        if(['INPUT', 'TEXTAREA'].reduce((c, itm) => node.nodeName === itm ? 1 : c, 0)) {
+          node.placeholder = translates[lang][key]
+        }
+        else node.innerHTML = translates[lang][key]
+      })
     }
   }
 }

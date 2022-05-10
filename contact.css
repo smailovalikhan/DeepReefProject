@@ -3,12 +3,14 @@
   padding-right: unset;
 }
 
+.screen5 > iframe {height: 500px}
+
 @media (min-width: 1024px) {
   .screen5 {padding-right: 13%}
 }
 
 .screen3 .screen3-cases .case-item {
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   width: 30%;
   margin-right: 4%;
   min-height: unset;
@@ -48,7 +50,7 @@
 
 @media (min-width: 641px) {
   .screen5 > .content,
-  .screen5 > img {width: 50% !important}
+  .screen5 > iframe {width: 50% !important}
 }
 
 @media (max-width: 640px) {
@@ -61,7 +63,7 @@
 
   .screen5 .content form {max-width: 100%}
 
-  .screen5 img {width: 100%}
+  .screen5 iframe {width: 100%}
 }
 
 @media (max-width: 400px) {

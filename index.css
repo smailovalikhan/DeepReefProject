@@ -587,7 +587,7 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
     height: unset;
   }
 
-  .screen1 .nav .menu-button-wrapper {top: 30px}
+  .screen1 .nav .menu-button-wrapper {top: 26px}
 
   .screen1 .txt-content h1 {
     margin-top: 190px;
@@ -691,7 +691,7 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
 @media (max-width: 400px) {
   .main-content-wrapper {padding: 30px 10px}
 
-  .screen1 .nav .menu-button-wrapper {top: 10px}
+  .screen1 .nav .menu-button-wrapper {top: 6px}
 
   .screen1 .language-dropdown {display: none}
 

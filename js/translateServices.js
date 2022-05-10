@@ -48,7 +48,9 @@ const translates = {
     t59: 'Home',
     t60: 'Deep Reef Token',
     t61: 'Calculate Investment',
-    t62: 'Video about Deep Reef'
+    t62: 'Video about Deep Reef',
+    t63: 'Subscribe to receive our updates and offers',
+    t64: 'Subscribe'
   },
   ru: {
     t1: 'Рассчитать инвестиции',
@@ -97,6 +99,8 @@ const translates = {
     t59: 'Главная',
     t60: 'Deep Reef Token',
     t61: 'Рассчитать инвестиции',
-    t62: 'Видео о компании'
+    t62: 'Видео о компании',
+    t63: 'Подпишитесь, чтобы получать наши обновления и предложения',
+    t64: 'Подписаться'
   }
 }
