@@ -38,7 +38,7 @@ function LangDrop(container) {
 
     if(curLang.dataset.lang !== lang) {
 
-      const nextLang = this.div.querySelector(`p[data-lang="${pageLang()}"]`)
+      const nextLang = this.div.querySelector(`p[data-lang="${lang}"]`)
 
       if(nextLang) {
         nextLang.insertAdjacentElement('afterend', curLang)
@@ -51,7 +51,7 @@ function LangDrop(container) {
   }
 
   this.div.onclick = e => {
-    if(e.target.dataset.lang && e.target.dataset.lang !== pageLang()) this.changeLang(e.target.dataset.lang)
+    if(e.target.dataset.lang && e.target.dataset.lang !== pageLang()) dropLangs.forEach(dl => dl.changeLang(e.target.dataset.lang))
     this.toggleDrop()
   }
 
