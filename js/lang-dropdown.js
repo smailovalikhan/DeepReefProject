@@ -12,41 +12,50 @@ function translatePage(lang) {
   }
 }
 
-translatePage(localStorage.getItem('pageLang') || 'en')
-document.body.dataset.lang = localStorage.getItem('pageLang') || 'en'
-recheckK()
+function setTranslate(lang) {
+  console.log(lang)
+  translatePage(lang)
+  recheckK()
+}
+
+if(!localStorage.getItem('pageLang')) localStorage.setItem('pageLang', 'en')
+
+function pageLang() {
+  return localStorage.getItem('pageLang')
+}
+
+setTranslate(pageLang())
 
 function LangDrop(container) {
   this.div = container
-  this.lang = this.div.querySelector('.main p[data-lang]').dataset.lang
+
   this.toggleDrop = () => {
     this.div.classList.toggle('active')
   }
-  this.setTranslate = () => {
-    console.log(this.lang)
 
-    translatePage(this.lang)
-    recheckK()
+  this.changeLang = lang => {
+    const curLang = this.div.querySelector('.main p[data-lang]')
+
+    if(curLang.dataset.lang !== lang) {
+
+      const nextLang = this.div.querySelector(`p[data-lang="${pageLang()}"]`)
+
+      if(nextLang) {
+        nextLang.insertAdjacentElement('afterend', curLang)
+        this.div.querySelector('.main').insertAdjacentElement('afterbegin', nextLang)
+
+        localStorage.setItem('pageLang', lang)
+        setTranslate(lang)
+      }
+    }
   }
 
   this.div.onclick = e => {
-    if(e.target.dataset.lang) {
-      if(e.target.dataset.lang !== this.lang) {
-        const curLang = this.div.querySelector('.main p[data-lang]'),
-              nextLang = e.target
-  
-        nextLang.insertAdjacentElement('afterend', curLang)
-        this.div.querySelector('.main').insertAdjacentElement('afterbegin', nextLang)
-        
-        this.lang = this.div.querySelector('.main p[data-lang]').dataset.lang
-        this.setTranslate()
-
-        document.body.dataset.lang = this.lang
-        localStorage.setItem('pageLang', this.lang)
-      }
-    }
+    if(e.target.dataset.lang && e.target.dataset.lang !== pageLang()) this.changeLang(e.target.dataset.lang)
     this.toggleDrop()
   }
+
+  this.changeLang(pageLang())
 }
 
 const dropLangs = Array.from(document.querySelectorAll('.language-dropdown')).map(c => new LangDrop(c))

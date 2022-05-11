@@ -691,6 +691,11 @@ body[data-lang="ru"] .hdl2 {font-size: 46px}
 @media (max-width: 400px) {
   .main-content-wrapper {padding: 30px 10px}
 
+  .screen1-bg video {
+    right: unset;
+    left: 0;
+  }
+
   .screen1 .nav .menu-button-wrapper {top: 6px}
 
   .screen1 .language-dropdown {display: none}
