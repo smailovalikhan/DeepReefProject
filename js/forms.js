@@ -76,3 +76,7 @@ function setSuccessPopup(form, formPopupId) {
 }
 
 setSuccessPopup(document.querySelector('#recive-updates form'), 'recive-updates')
+
+// AUTOPLAY VIDEOS
+
+document.querySelectorAll('video[autoplay]').forEach(v => v.play())
