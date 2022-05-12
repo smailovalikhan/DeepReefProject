@@ -34,11 +34,13 @@
     <div class="content-container">
       <div class="close-button"><img src="img/close.svg" alt=""></div>
 
-      <p data-t="t63">Subscribe to receive our updates and offers</p>
-      <div class="e-field">
-        <input type="text" placeholder="E-mail">
-        <a class="btn big-btn buttxt" data-t="t64">Subscribe</a>
-      </div>
+      <form>
+        <p data-t="t63">Subscribe to receive our updates and offers</p>
+        <div class="e-field">
+          <input type="text" name="email" placeholder="E-mail">
+          <button type="submit" class="btn big-btn buttxt" data-t="t64">Subscribe</button>
+        </div>
+      </form>
     </div>
   </div>
 
@@ -148,7 +150,7 @@
         </h2>
 
         <div class="description">
-          <form action="">
+          <form>
             <input data-t="t36" type="text" name="first-name" placeholder="First name">
             <input data-t="t37" type="text" name="last-name" placeholder="Last name">
             <input data-t="t38" type="text" name="email" placeholder="Email">

@@ -3,7 +3,7 @@
 function popup(id, showButton) {
   const popup = document.querySelector('#' + id + '.popup')
 
-  showButton.addEventListener('click', () => popupShow(id))
+  showButton?.addEventListener('click', () => popupShow(id))
   popup.querySelector('.close-button').addEventListener('click', () => popupHide(id))
 }
 
